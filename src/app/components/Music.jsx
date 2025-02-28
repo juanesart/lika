@@ -6,7 +6,7 @@ export default function Music({ track1 }) {
     const [isPlaying1, setIsPlaying1] = useState(false);
 
     const handlePlayPause1 = () => {
-        const audio = document.getElementById('track1');
+        const audio = document.getElementById(track1);
         if (isPlaying1) {
             audio.pause();
         } else {
@@ -20,10 +20,10 @@ export default function Music({ track1 }) {
             <div>
                 <button onClick={handlePlayPause1}>
                     {isPlaying1
-                        ? <FaPauseCircle size={50} fill='red' />
-                        : <FaPlayCircle size={50} fill='red' />} Track 1
+                        ? <FaPauseCircle size={50} fill='#AA60C8' />
+                        : <FaPlayCircle size={50} fill='#AA60C8' />}
                 </button>
-                <audio id="track1" src={track1}></audio>
+                <audio id={track1} src={track1}></audio>
             </div>
         </div>
     );
